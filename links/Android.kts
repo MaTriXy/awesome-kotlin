@@ -195,6 +195,56 @@ category("Android") {
       type =  github
       tags =  Tags["library", "particle", "confetti", "ui", "konfetti", "confetti"]
     }
+    link {
+      name = "rahulchowdhury/Mystique"
+      desc = "A generalized adapter for RecyclerView on Android which makes it easy to add heterogeneous items to a list."
+      href = "https://github.com/rahulchowdhury/Mystique"
+      type = github
+      tags = Tags["android", "recycler view"]
+    }
+    link {
+      name = "calintat/alps"
+      desc = "Android library for preferences which includes property delegates and a custom DSL for definining preferences."
+      href = "https://github.com/calintat/alps"
+      type = github
+      tags = Tags["android-library", "kotlin", "preferences", "dsl"]
+    }
+    link {
+      name = "costular/kotlin-android-utils"
+      desc = "Android utilities for easier and faster Kotlin programming."
+      href = "https://github.com/costular/kotlin-android-utils"
+      type = github
+      tags = Tags["kotlin", "android", "kotlin-android", "android-utils",
+      "fragments", "activity", "permissions", "utils", "notifications", "android-kotlin", "library"]
+    }
+    link {
+      name = "rakshakhegde/ObservableFlow"
+      desc = "Functional Constructs for Databinding + Kotlin + RxJava"
+      href = "https://github.com/rakshakhegde/ObservableFlow"
+      type = github
+      tags = Tags["android", "library", "functional", "reactive", "databinding", "rxjava"]
+    }
+    link {
+      name = "programmerr47/ganalytics"
+      desc = "A tiny api layer for any analytics in application."
+      href = "https://github.com/programmerr47/ganalytics"
+      type = github
+      tags = Tags["kotlin", "android", "kotlin-android", "analytics", "android-analytics"]
+    }
+    link {
+      name = "line/clay"
+      desc = "Clay is an Android library project that provides image trimming which is originally an UI component of LINE Creators Studio."
+      href = "https://github.com/line/clay"
+      type = github
+      tags = Tags["android", "trimming"]
+    }
+    link {
+      name = "WindSekirun/RichUtilsKt"
+      desc = "Advancement Utils for Android Developer written in Kotlin"
+      href = "https://github.com/WindSekirun/RichUtilsKt"
+      type = github
+      tags = Tags["android"]
+    }
   }
   subcategory("Frameworks") {
     link {
@@ -210,6 +260,13 @@ category("Android") {
       href = "https://github.com/lightningkite/kotlin-core"
       type = github
       tags = Tags["kotson", "anko", "android"]
+    }
+    link {
+      name = "codenameone/CodenameOne"
+      desc = "Open source cross platform mobile development framework that offers write once run anywhere native development for iOS (iPhone/iPad), Android, Windows & more using Kotlin & Java"
+      href = "https://github.com/codenameone/CodenameOne"
+      type = github
+      tags = Tags["cross-platform", "ikvm", "codenameone", "java", "iphone", "mobile"]
     }
   }
   subcategory("Projects") {
@@ -240,9 +297,9 @@ category("Android") {
       tags = Tags["rss", "android"]
     }
     link {
-      name = "MakinGiants/banjen-android-banjo-tuner"
-      desc = "App that plays sounds helping to tune a brazilian banjo."
-      href = "https://github.com/MakinGiants/banjen-android-banjo-tuner"
+      name = "MakinGiants/banjen"
+      desc = "Android app to help to tune a banjo."
+      href = "https://github.com/MakinGiants/banjen"
       type = github
       tags = Tags["android", "application", "tuner"]
     }
@@ -337,6 +394,76 @@ category("Android") {
       type = github
       tags = Tags["android", "application"]
     }
+    link {
+      name = "ahong222/happy21"
+      desc = "A simple game of Black-Jack write with kotlin"
+      href = "https://github.com/ahong222/happy21"
+      type = github
+      tags = Tags["android", "application"]
+    }
+    link {
+      name = "AllanWang/KAU"
+      desc = "An extensive collection of Kotlin Android Utils"
+      href = "https://github.com/AllanWang/KAU"
+      type = github
+      tags = Tags["android", "extensions", "utils", "library", "material", "ui", "sharedpreferences", "media-picker", "searchview", "color-picker", "permission-manager"]
+    }
+    link {
+      name = "hanjoongcho/aaf-easyphotomap"
+      desc = "This is a photomap app that shows photos taken on a map."
+      href = "https://github.com/hanjoongcho/aaf-easyphotomap"
+      type = github
+      tags = Tags["android", "application", "photomap", "map"]
+    }
+    link {
+      name = "Karumi/KataScreenshotKotlin"
+      desc = "An full exercise to learn how to create screenshot tests for Android"
+      href = "https://github.com/Karumi/KataScreenshotKotlin"
+      type = github
+      tags = Tags["android", "application", "testing", "screenshot"]
+    }
+    link {
+      name = "massivedisaster/AFM"
+      desc = "An library to help android developers working easly with activities and fragments with Kotlin"
+      href = "https://github.com/massivedisaster/AFM"
+      type = github
+      tags = Tags["android", "utils", "library", "material", "ui", "fragment", "activity", "sharedelements"]
+    }
+    link {
+      name = "mustafaberkaymutlu/uv-index"
+      desc = "A simple ultraviolet index viewer app for demonstrating Instant Apps + Kotlin + Dagger + MVP"
+      href = "https://github.com/mustafaberkaymutlu/uv-index"
+      type = github
+      tags = Tags["android", "instant-apps", "application", "dagger", "mvp"]
+    }
+    link {
+      name = "Karumi/KataSuperHeroesKotlin"
+      desc = "A full exercise to learn how to create espresso tests using test doubles and a dependency injector for Android written in Kotlin."
+      href = "https://github.com/Karumi/KataSuperHeroesKotlin"
+      type = github
+      tags = Tags["android", "application", "testing", "espresso", "test-doubles"]
+    }
+    link {
+      name = "Karumi/KataContactsKotlin"
+      desc = "An exercise to learn how to write software based on Clean Architecture using Kotlin."
+      href = "https://github.com/Karumi/KataContactsKotlin"
+      type = github
+      tags = Tags["architecture", "testing"]
+    }
+    link {
+      name = "Karumi/KataTODOApiClientKotlin"
+      desc = "A full exercise to learn how to use stubbing HTTP in Kotlin."
+      href = "https://github.com/Karumi/KataTODOApiClientKotlin"
+      type = github
+      tags = Tags["android", "testing", "stubbing-http"]
+    }
+    link {
+      name = "Karumi/MaxibonKataKotlin"
+      desc = "A ready to use playground to learn how to write tests using property-based testing in Kotlin. "
+      href = "https://github.com/Karumi/MaxibonKataKotlin"
+      type = github
+      tags = Tags["testing", "functional-programming", "property-based"]
+    }
   }
   subcategory("Extensions") {
     link {
@@ -354,6 +481,15 @@ category("Android") {
       href = "https://github.com/kiruto/debug-bottle"
       type = github
       tags = Tags["android", "debug"]
+    }
+  }
+  subcategory("Tests") {
+    link {
+      name = "agoda-com/Kakao"
+      desc = " Nice and simple DSL for Espresso in Kotlin."
+      href = "https://github.com/agoda-com/Kakao"
+      type = github
+      tags = Tags["espresso", "dsl "]
     }
   }
 }

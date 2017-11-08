@@ -77,6 +77,13 @@ category("Projects") {
       type = github
       tags = Tags["serverless", "lambda"]
     }
+    link {
+      name = "ssouris/petclinic-spring5-reactive"
+      desc = "Spring 5 Reactive Petclinic app written in Kotlin."
+      href = "https://github.com/ssouris/petclinic-spring5-reactive"
+      type = github
+      tags = Tags["spring", "reactive", "web"]
+    }
   }
   subcategory("Build tools") {
     link {
@@ -135,6 +142,27 @@ category("Projects") {
       href = "https://github.com/vicboma1/GameBoyEmulatorEnvironment"
       type = github
       tags = Tags["GameBoy","Emulator", "frontend", "kotlin", "experimental"]
+    }
+    link {
+      name = "borisf/classyshark-bytecode-viewer"
+      desc = "View your Kotlin generated classes as Java and bytecode format."
+      href = "https://github.com/borisf/classyshark-bytecode-viewer"
+      type = github
+      tags = Tags["bytecode", "decompiler"]
+    }
+    link {
+      name = "jenkinsci/doktor-plugin"
+      desc = "Jenkins plugin for automated documentation uploading to Confluence."
+      href = "https://github.com/jenkinsci/doktor-plugin"
+      type = github
+      tags = Tags["jenkins", "documentation", "confluence"]
+    }
+    link {
+      name = "mkobit/jenkins-pipeline-shared-libraries-gradle-plugin"
+      desc = "Gradle plugin to help with build and test of Jenkins Pipeline Shared Libraries."
+      href = "https://github.com/mkobit/jenkins-pipeline-shared-libraries-gradle-plugin"
+      type = github
+      tags = Tags["jenkins", "gradle"]
     }
   }
   subcategory("Desktop") {
@@ -211,13 +239,6 @@ category("Projects") {
       tags = Tags["examples", "study"]
     }
     link {
-      name = "sanity/pairAdjacentViolators"
-      desc = "A Kotlin implementation of the Pair Adjacent Violators algorithm for isotonic regression."
-      href = "https://github.com/sanity/pairAdjacentViolators"
-      type = github
-      tags = Tags["examples"]
-    }
-    link {
       name = "vicboma1/Kotlin-Koans"
       desc = "hese are the simple solutions of the kotlin koans online with intellij project."
       href = "https://github.com/vicboma1/Kotlin-Koans"
@@ -244,6 +265,20 @@ category("Projects") {
       href = "https://github.com/pakoito/FunctionalAndroidReference"
       type = github
       tags = Tags["android", "examples", "functional"]
+    }
+    link {
+      name = "bmaslakov/kotlin-algorithm-club"
+      desc = "Classic algorithms and data structures in Kotlin."
+      href = "https://github.com/bmaslakov/kotlin-algorithm-club"
+      type = github
+      tags = Tags["examples"]
+    }
+    link {
+      name = "gyulavoros/kotlin-todomvc"
+      desc = "Kotlin TodoMVC – full-stack Kotlin application demo"
+      href = "https://github.com/gyulavoros/kotlin-todomvc"
+      type = github
+      tags = Tags["examples", "javascript", "web", "gradle"]
     }
   }
   subcategory("Idea Plugins") {

@@ -8,9 +8,9 @@ import link.kotlin.scripts.subcategory
 category("Libraries/Frameworks") {
   subcategory("Web") {
     link {
-      name = "Kotlin/ktor"
-      desc = "Web backend framework for Kotlin."
-      href = "https://github.com/Kotlin/ktor"
+      name = "ktorio/ktor"
+      desc = "Web backend framework for Kotlin. Easy to use, fun and asynchronous."
+      href = "https://github.com/ktorio/ktor"
       type = github
       tags = Tags["web"]
     }
@@ -71,6 +71,13 @@ category("Libraries/Frameworks") {
       tags = Tags["spring", "extensions"]
     }
     link {
+      name = "pgutkowski/KGraphQL"
+      desc = "A GraphQL implementation written in Kotlin"
+      href = "https://github.com/pgutkowski/KGraphQL"
+      type = github
+      tags = Tags["graphql", "web"]
+    }
+    link {
       name = "taskworld/kraph"
       desc = "GraphQL request string builder written in Kotlin"
       href = "https://github.com/taskworld/kraph"
@@ -117,6 +124,48 @@ category("Libraries/Frameworks") {
       href = "https://github.com/brianmadden/krawler"
       type = github
       tags = Tags["crawler4j", "web-crawler", "webcrawler", "link-checker"]
+    }
+    link {
+      name = "mvysny/vaadin-on-kotlin"
+      desc = "A simple way to write full-stack database-backed component-oriented web apps"
+      href = "https://github.com/mvysny/vaadin-on-kotlin"
+      type = github
+      tags = Tags["web", "fullstack", "vaadin"]
+    }
+    link {
+      name = "perwendel/spark-kotlin"
+      desc = "A DSL in idiomatic Kotlin for the Spark web framework."
+      href = "https://github.com/perwendel/spark-kotlin"
+      type = github
+      tags = Tags["web", "rest", "http"]
+    }
+    link {
+      name = "hexagonkt/hexagon"
+      desc = "A Microservices framework that takes care of HTTP, serializtion and storage."
+      href = "https://github.com/hexagonkt/hexagon"
+      type = github
+      tags = Tags["web", "rest", "http"]
+    }
+    link {
+      name = "danneu/kog"
+      desc = "A web framework focused on simplicity, middleware, and functional composition"
+      href = "https://github.com/danneu/kog"
+      type = github
+      tags = Tags["web", "http", "rest", "jetty", "websockets"]
+    }
+    link {
+      name = "tipsy/javalin"
+      desc = "A Simple REST API Library for Java/Kotlin."
+      href = "https://github.com/tipsy/javalin"
+      type = github
+      tags = Tags["kotlin", "rest-api", "web-framework", "microservice", "servlet", "jetty"]
+    }
+    link {
+      name = "laviua/komock"
+      desc = "HTTP/Consul/SMTP/Spring Config mocker framework written in Kotlin"
+      href = "https://github.com/laviua/komock"
+      type = github
+      tags = Tags["kotlin", "http", "consul", "microservice", "mock", "jetty", "netty", "smtp", "ssl"]
     }
   }
   subcategory("Tests") {
@@ -197,6 +246,20 @@ category("Libraries/Frameworks") {
       type = github
       tags = Tags["test", "specification", "rspec", "spek"]
     }
+    link {
+      name = "qwertukg/SeleniumBuilder"
+      desc = "DSL for Selenium 2.0. Provide a possibility to write tests in Kotlin builder style."
+      href = "https://github.com/qwertukg/SeleniumBuilder"
+      type = github
+      tags = Tags["selenium", "test"]
+    }
+    link {
+      name = "oleksiyp/mockk"
+      desc = "Pure Kotlin mocking library."
+      href = "https://github.com/oleksiyp/mockk"
+      type = github
+      tags = Tags["test", "mock"]
+    }
   }
   subcategory("Dependency Injection") {
     link {
@@ -208,14 +271,14 @@ category("Libraries/Frameworks") {
     }
     link {
       name = "kohesive/injekt"
-      desc = "(Deprecated, @see Kodein) Dependency Injection / Object Factory for Kotlin"
+      desc = "(Deprecated, @see Kodein) Dependency Injection / Object Factory for Kotlin."
       href = "https://github.com/kohesive/injekt"
       type = github
       tags = Tags["di", "dependency injection"]
     }
     link {
       name = "kailan/kodeinject"
-      desc = "Constructor dependency injection for Kodein"
+      desc = "Constructor dependency injection for Kodein."
       href = "https://github.com/kailan/kodeinject"
       type = github
       tags = Tags["di", "dependency injection", "kodein"]
@@ -226,6 +289,20 @@ category("Libraries/Frameworks") {
       href = "https://github.com/traversals/kapsule"
       type = github
       tags = Tags["di", "dependency injection"]
+    }
+    link {
+      name = "JLLeitschuh/kotlin-guiced"
+      desc = "Convenience Kotlin API over the Google Guice DI Library."
+      href = "https://github.com/JLLeitschuh/kotlin-guiced"
+      type = github
+      tags = Tags["Dependency Injection", "Guice"]
+    }
+    link {
+      name = "Ekito/koin"
+      desc = "A functional Kotlin dependency injection framework for Android and JVM."
+      href = "https://github.com/Ekito/koin"
+      type = github
+      tags = Tags["android", "dependency-injection", "injection", "functional"]
     }
   }
   subcategory("Coroutines") {
@@ -316,6 +393,13 @@ category("Libraries/Frameworks") {
       tags = Tags["fp", "functional", "UI", "Interface", "Redux"]
     }
     link {
+      name = "michaelbull/kotlin-result"
+      desc = "A Result monad for modelling success or failure operations - inspired by Elm, Rust, & Haskell."
+      href = "https://github.com/michaelbull/kotlin-result"
+      type = github
+      tags = Tags["fp", "functional", "result", "monad", "either", "type"]
+    }
+    link {
       name = "pakoito/Komprehensions"
       desc = "Do comprehensions for Kotlin and 3rd party libraries."
       href = "https://github.com/pakoito/Komprehensions"
@@ -330,11 +414,11 @@ category("Libraries/Frameworks") {
       tags = Tags["fp", "functional", "monads"]
     }
     link {
-      name = "FineCinnamon/Katz"
-      desc = "Typeful functional programming in Kotlin."
-      href = "https://github.com/FineCinnamon/Katz"
+      name = "Kategory/Kategory"
+      desc = "Functional datatypes & abstractions for Kotlin."
+      href = "https://github.com/Kategory/Kategory"
       type = github
-      tags = Tags["fp", "functional", "cats"]
+      tags = Tags["fp", "functional", "typeclasses", "comprehensions", "lenses", "optics"]
     }
     link {
       name = "poetix/klenses"
@@ -349,6 +433,13 @@ category("Libraries/Frameworks") {
       href = "https://github.com/reactor/reactor-kotlin-extensions/"
       type = github
       tags = Tags["reactor", "extensions"]
+    }
+    link {
+      name = "UrbanCompass/Snail-Kotlin"
+      desc = "An observables framework for Kotlin."
+      href = "https://github.com/UrbanCompass/Snail-Kotlin"
+      type = github
+      tags = Tags["observables", "fp", "functional"]
     }
   }
   subcategory("JSON") {
@@ -386,6 +477,13 @@ category("Libraries/Frameworks") {
       href = "https://github.com/Jire/KTON"
       type = github
       tags = Tags["JSON", "XML"]
+    }
+    link {
+      name = "fluidsonic/fluid-json"
+      desc = "A JSON library written in pure Kotlin."
+      href = "https://github.com/fluidsonic/fluid-json"
+      type = github
+      tags = Tags["json"]
     }
   }
   subcategory("Database") {
@@ -485,6 +583,20 @@ category("Libraries/Frameworks") {
       href = "https://github.com/KotlinPorts/kt-postgresql-async"
       type = github
       tags = Tags["postgres", "mysql", "database driver"]
+    }
+    link {
+      name = "shyiko/levelkt"
+      desc = "LevelDB client for Kotlin and/or Java 8+."
+      href = "https://github.com/shyiko/levelkt"
+      type = github
+      tags = Tags["leveldb", "embedded"]
+    }
+    link {
+      name = "SubiyaCryolite/jds"
+      desc = "Jenesis Data Store: a dynamic, cross platform, high performance, ORM data-mapper. Designed to assist in rapid development and data mining."
+      href = "https://github.com/SubiyaCryolite/jds"
+      type = github
+      tags = Tags["orm", "postgres", "mysql", "mssql", "sqlite", "oracle"]
     }
   }
   subcategory("Tools") {
@@ -665,9 +777,9 @@ category("Libraries/Frameworks") {
   }
   subcategory("Game Development") {
     link {
-      name = "czyzby/ktx"
+      name = "libktx/ktx"
       desc = "Kotlin utilities for LibGDX applications."
-      href = "https://github.com/czyzby/ktx"
+      href = "https://github.com/libktx/ktx"
       type = github
       tags = Tags["LibGDX", "game dev", "games"]
     }
@@ -684,6 +796,13 @@ category("Libraries/Frameworks") {
       href = "https://github.com/icela/FriceEngine"
       type = github
       tags = Tags["desktop", "games", "game dev"]
+    }
+    link {
+      name = "vassilibykov/AdventKT"
+      desc = "A Kotlin-based DSL for text adventures, with a partial replica of the classic Colossal Cave as an example."
+      href = "https://github.com/vassilibykov/AdventKT"
+      type = github
+      tags = Tags["games", "text adventures"]
     }
   }
   subcategory("Misc") {
@@ -854,11 +973,59 @@ category("Libraries/Frameworks") {
       tags = Tags["alexa", "amazon echo", "text to speech"]
     }
     link {
+      name = "TicketmasterMobileStudio/actions-on-google-kotlin"
+      desc = "Port of official Node.js SDK to Kotlin. Complete with all features and tests and nearly identical API."
+      href = "https://github.com/TicketmasterMobileStudio/actions-on-google-kotlin"
+      type = github
+      tags = Tags["actions on google", "google assistant", "google home"]
+    }
+    link {
       name = "cretz/asmble"
       desc = "Compile WebAssembly to JVM and other WASM tools."
       href = "https://github.com/cretz/asmble"
       type = github
       tags = Tags["wasm", "webassembly"]
+    }
+    link {
+      name = "h0tk3y/better-parse"
+      desc = "A nice parser combinator library for Kotlin"
+      href = "https://github.com/h0tk3y/better-parse"
+      type = github
+      tags = Tags["parser", "parser-combinator", "grammar", "lexer"]
+    }
+    link {
+      name = "Kotlin/kotlinx.atomicfu"
+      desc = "The idiomatic way to use atomic operations in Kotlin."
+      href = "https://github.com/Kotlin/kotlinx.atomicfu"
+      type = github
+      tags = Tags["atomic"]
+    }
+    link {
+      name = "vjames19/kotlin-futures"
+      desc = "A collections of extension functions to make the JVM Future, CompletableFuture, ListenableFuture API more functional and Kotlin like."
+      href = "https://github.com/vjames19/kotlin-futures"
+      type = github
+    }
+    link {
+      name = "kunalsheth/units-of-measure"
+      desc = "A type-safe dimensional analysis library for Kotlin."
+      href = "https://github.com/kunalsheth/units-of-measure"
+      type = github
+      tags = Tags["dimensional-analysis", "typesafety", "metaprogramming"]
+    }
+    link {
+      name = "spoptchev/kotlin-preconditions"
+      desc = "Precondition error checking in kotlin."
+      href = "https://github.com/spoptchev/kotlin-preconditions"
+      type = github
+      tags = Tags["preconditions"]
+    }
+    link {
+      name = "soywiz/klock"
+      desc = "Consistent and portable date and time utilities for multiplatform kotlin (JVM, JS and Common)."
+      href = "https://github.com/soywiz/klock"
+      type = github
+      tags = Tags["js", "date", "time"]
     }
   }
   subcategory("Extensions") {
@@ -867,7 +1034,14 @@ category("Libraries/Frameworks") {
       desc = "Extension and top-level functions to use JDK7/JDK8 features in Kotlin 1.0."
       href = "https://github.com/Kotlin/kotlinx.support"
       type = github
-      tags = Tags["jdk8", "jdk7"]
+      tags = Tags["extensions", "jdk8", "jdk7"]
+    }
+    link {
+      name = "vanshg/KrazyKotlin"
+      desc = "A collection of useful Kotlin Extension"
+      href = "https://github.com/vanshg/KrazyKotlin"
+      type = github
+      tags = Tags["extensions"]
     }
   }
   subcategory("Configuration") {
@@ -896,6 +1070,27 @@ category("Libraries/Frameworks") {
       name = "jdiazcano/cfg4k"
       desc = "Flexible and easy to use config library written in kotlin."
       href = "https://github.com/jdiazcano/cfg4k"
+      type = github
+      tags = Tags["configuration"]
+    }
+    link {
+      name = "daviddenton/configur8"
+      desc = "A Kotlin port of Configur8 - A Type Safe Configuration API for Kotlin, extendable to user-defined types."
+      href = "https://github.com/daviddenton/configur8"
+      type = github
+      tags = Tags["configuration"]
+    }
+    link {
+      name = "ufoscout/properlty"
+      desc = "Simple configuration library with placeholders resolution and zero magic!"
+      href = "https://github.com/ufoscout/properlty"
+      type = github
+      tags = Tags["configuration"]
+    }
+    link {
+      name = "uchuhimo/konf"
+      desc = "A type-safe cascading configuration library for Kotlin/Java, supporting most configuration formats"
+      href = "https://github.com/uchuhimo/konf"
       type = github
       tags = Tags["configuration"]
     }
@@ -944,9 +1139,9 @@ category("Libraries/Frameworks") {
       tags = Tags["vr", "openvr", "opengl", "vulkan"]
     }
     link {
-      name = "java-graphics/assimp"
+      name = "kotlin-graphics/assimp"
       desc = "Open Asset Import Library port"
-      href = "https://github.com/java-graphics/assimp"
+      href = "https://github.com/kotlin-graphics/assimp"
       type = github
       tags = Tags["assimp", "stl", "md2", "ply", "obj", "collada", "opengl", "vulkan"]
     }
@@ -970,6 +1165,20 @@ category("Libraries/Frameworks") {
       href = "https://github.com/java-opengl-labs/learn-OpenGL"
       type = github
       tags = Tags["opengl", "tutorial", "lwjgl"]
+    }
+    link {
+      name = "kotlin-graphics/imgui"
+      desc = "jvm port of imgui"
+      href = "https://github.com/kotlin-graphics/imgui"
+      type = github
+      tags = Tags["opengl", "gui", "gamedev"]
+    }
+    link {
+      name = "Jonatino/JOGL2D"
+      desc = "Zero-overhead 2D rendering library for JOGL using Kotlin."
+      href = "https://github.com/Jonatino/JOGL2D"
+      type = github
+      tags = Tags["jogl", "opengl"]
     }
   }
   subcategory("Data Science") {
@@ -1007,6 +1216,20 @@ category("Libraries/Frameworks") {
       href = "https://github.com/MarcinMoskala/KotlinDiscreteMathToolkit"
       type = github
       tags = Tags["data science", "math"]
+    }
+    link {
+      name = "sekwiatkowski/Komputation"
+      desc = "A neural network framework written in Kotlin."
+      href = "https://github.com/sekwiatkowski/Komputation"
+      type = github
+      tags = Tags["data science", "neural-networks", "deep-learning", "machine-learning", "artificial-intelligence"]
+    }
+    link {
+      name = "sanity/pairAdjacentViolators"
+      desc = "A Kotlin implementation of the Pair Adjacent Violators algorithm for isotonic regression."
+      href = "https://github.com/sanity/pairAdjacentViolators"
+      type = github
+      tags = Tags["data science", "pair adjacent violators"]
     }
   }
   subcategory("Command Line Interface") {

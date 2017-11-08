@@ -1,11 +1,15 @@
 package link.kotlin.scripts
 
 import link.kotlin.scripts.ArticleFeature.highlightjs
-import link.kotlin.scripts.LanguageCodes.EN
+import link.kotlin.scripts.model.LanguageCodes
+import link.kotlin.scripts.model.LanguageCodes.EN
 import link.kotlin.scripts.model.Link
+import link.kotlin.scripts.utils.ScriptCompiler
+import link.kotlin.scripts.utils.logger
 import org.commonmark.ext.gfm.tables.TablesExtension
 import org.commonmark.parser.Parser
 import org.commonmark.renderer.html.HtmlRenderer
+import org.slf4j.Logger
 import java.io.IOException
 import java.nio.file.FileVisitResult
 import java.nio.file.FileVisitor
@@ -20,6 +24,7 @@ import java.time.format.SignStyle.EXCEEDS_PAD
 import java.time.format.TextStyle.FULL
 import java.time.temporal.ChronoField.MONTH_OF_YEAR
 import java.time.temporal.ChronoField.YEAR
+import java.util.Locale
 
 // TODO: FIXME: WARNING: Refactor SHIT code
 
@@ -49,13 +54,15 @@ data class Enclosure(
  * @author Ibragimov Ruslan
  * @since 0.1
  */
-class Articles(private val compiler: ScriptCompiler) {
+class Articles(
+    private val compiler: ScriptCompiler
+) {
     private val _articles by lazy {
         this
             .scan(Paths.get("articles"))
             .asSequence()
             .onEach { validateArticleName(it.fileName.toString()) }
-            .map { toArticle(it, compiler) }
+            .map { toArticle(it, compiler, LOGGER) }
             .sortedWith(Comparator { a, b -> b.date.compareTo(a.date) })
             .toList()
     }
@@ -111,6 +118,10 @@ class Articles(private val compiler: ScriptCompiler) {
 
         return articles
     }
+
+    companion object {
+        private val LOGGER = logger<Articles>()
+    }
 }
 
 private val dayFormatter: DateTimeFormatter = DateTimeFormatterBuilder()
@@ -118,6 +129,7 @@ private val dayFormatter: DateTimeFormatter = DateTimeFormatterBuilder()
     .appendLiteral(' ')
     .appendValue(YEAR, 4, 10, EXCEEDS_PAD)
     .toFormatter()
+    .withLocale(Locale.US)
 
 private fun getCategory(articles: List<Article>): Category {
     val groupByDate = articles.groupBy { it.date.format(dayFormatter) }
@@ -173,11 +185,11 @@ private fun getFileName(path: Path): String {
         .replace(Regex("^-"), "") // Replace first dash in string with ''
         .replace(Regex("-+"), "-") // Replace multiple dashes with one dash
 
-    return "${escaped}.html"
+    return "$escaped.html"
 }
 
-private fun toArticle(path: Path, compiler: ScriptCompiler): Article {
-    println(path.toString())
+private fun toArticle(path: Path, compiler: ScriptCompiler, logger: Logger): Article {
+    logger.info("Processing script: $path.")
     val article = readFile(path, compiler)
     val document = parser.parse(article.body)
     val html = renderer.render(document)

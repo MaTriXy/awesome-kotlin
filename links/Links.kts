@@ -22,7 +22,7 @@ category("Links") {
       href = "http://kotlinlang.org/docs/reference/"
     }
     link {
-      name = "Slack (8900+ users)"
+      name = "Slack (10000+ users)"
       href = "https://kotlinslack.herokuapp.com/"
     }
     link {
@@ -108,6 +108,21 @@ category("Links") {
       name = "Kotlin Cheat Sheet"
       href = "https://speakerdeck.com/agiuliani/kotlin-cheat-sheet"
     }
+    link {
+      name = "Kotlin Kōans Android app"
+      desc = "Learn Kotlin with short coding challenges on your Android device"
+      href = "https://play.google.com/store/apps/details?id=me.vickychijwani.kotlinkoans"
+    }
+    link {
+      name = "Kotlin Guide"
+      desc = "An introduction to Kotlin"
+      href = "https://kotlin.guide"
+    }
+    link {
+      name = "Kotlin Academy"
+      desc = "Blog that teach about Kotlin"
+      href = "https://blog.kotlin-academy.com/"
+    }
   }
   subcategory("Books and Courses") {
     link {
@@ -121,6 +136,11 @@ category("Links") {
     link {
       name = "Programming Kotlin - Stephen Samuel, Stefan Bocutiu"
       href = "https://www.packtpub.com/application-development/programming-kotlin"
+    }
+    link {
+      name = "Fundamental Kotlin, First Edition"
+      desc = "Learn Kotlin quickly from the start"
+      href = "http://www.fundamental-kotlin.com/"
     }
     link {
       name = "Kotlin for Java Developers"
@@ -144,4 +164,3 @@ category("Links") {
     }
   }
 }
-
