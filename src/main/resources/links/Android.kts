@@ -240,10 +240,17 @@ category("Android") {
     }
     link {
       name = "WindSekirun/RichUtilsKt"
-      desc = "Advancement Utils for Android Developer written in Kotlin"
+      desc = "Advancement Utils for Android Developer written in Kotlin."
       href = "https://github.com/WindSekirun/RichUtilsKt"
       type = github
       tags = Tags["android"]
+    }
+    link {
+      name = "TradeMe/MapMe"
+      desc = "A library that brings the adapter pattern and DiffUtil to Google Maps and MapBox."
+      href = "https://github.com/TradeMe/MapMe"
+      type = github
+      tags = Tags["diffutil", "googlemaps", "mapbox", "maps", "kotlin", "kotlin-android", "recyclerview", "markers"]
     }
   }
   subcategory("Frameworks") {
@@ -463,6 +470,13 @@ category("Android") {
       href = "https://github.com/Karumi/MaxibonKataKotlin"
       type = github
       tags = Tags["testing", "functional-programming", "property-based"]
+    }
+    link {
+      name = "hanjoongcho/aaf-easypassword"
+      desc = "A password manager using a single lock pattern for various type passwords management."
+      href = "https://github.com/hanjoongcho/aaf-easypassword"
+      type = github
+      tags = Tags["android", "application", "password-manager", "password-strength"]
     }
   }
   subcategory("Extensions") {
