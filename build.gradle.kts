@@ -1,54 +1,46 @@
-import org.gradle.kotlin.dsl.apply
-import org.gradle.kotlin.dsl.extra
-import org.gradle.kotlin.dsl.getValue
-import org.gradle.kotlin.dsl.kotlin
-import org.gradle.kotlin.dsl.repositories
-import org.jetbrains.kotlin.gradle.dsl.Coroutines
-import org.jetbrains.kotlin.gradle.dsl.KotlinProjectExtension
-
-val kotlinVersion: String by project
-val commonMarkVersion: String by project
-
 plugins {
     application
-    kotlin("jvm") version "1.2.41"
+    kotlin("jvm").version("2.0.21")
+    kotlin("plugin.serialization").version("2.0.21")
 }
 
 application {
-    mainClassName = "link.kotlin.scripts.Application"
-}
-
-kotlin {
-    experimental.coroutines = Coroutines.ENABLE
+    mainClass.set("link.kotlin.scripts.Application")
 }
 
 repositories {
-    jcenter()
-    maven { setUrl("https://dl.bintray.com/heapy/heap") }
+    mavenCentral()
+}
+
+tasks.test {
+    useJUnitPlatform()
 }
 
 dependencies {
-    compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion")
-    compile("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
-    compile("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:0.22.5")
+    implementation(kotlin("stdlib-jdk8"))
+    implementation(kotlin("reflect"))
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.10.1")
 
-    compile("com.fasterxml.jackson.module:jackson-module-kotlin:2.9.2")
-    compile("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.9.3")
-    compile("org.slf4j:slf4j-api:1.7.25")
-    compile("ch.qos.logback:logback-classic:1.2.3")
-    compile("io.sentry:sentry-logback:1.6.3")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.18.2")
+    implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.18.2")
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.18.2")
 
-    compile("com.rometools:rome:1.7.0")
-    compile("com.github.dfabulich:sitemapgen4j:1.0.6")
-    compile("org.jsoup:jsoup:1.10.2")
-    compile("by.heap.remark:remark-kotlin:1.2.0")
+    implementation("ch.qos.logback:logback-classic:1.5.16")
 
-    compile("org.jetbrains.kotlin:kotlin-script-util:$kotlinVersion")
-    compile("org.jetbrains.kotlin:kotlin-compiler-embeddable:$kotlinVersion")
-    compile("com.atlassian.commonmark:commonmark:$commonMarkVersion")
-    compile("com.atlassian.commonmark:commonmark-ext-gfm-tables:$commonMarkVersion")
+    implementation("com.rometools:rome:2.1.0")
+    implementation("com.github.dfabulich:sitemapgen4j:1.1.2")
+    implementation("org.jsoup:jsoup:1.18.3")
 
-    compile("com.squareup.okhttp3:okhttp:3.8.1")
+    implementation(kotlin("scripting-common"))
+    implementation(kotlin("scripting-jvm"))
+    implementation(kotlin("scripting-jvm-host"))
 
-    testCompile("junit:junit:4.12")
+    implementation("org.commonmark:commonmark:0.24.0")
+    implementation("org.commonmark:commonmark-ext-gfm-tables:0.24.0")
+
+    implementation("io.ktor:ktor-client-apache:3.0.3")
+    implementation("io.ktor:ktor-client-jackson:3.0.3")
+
+    testImplementation("io.mockk:mockk:1.13.14")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.11.4")
 }

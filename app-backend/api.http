@@ -1,0 +1,54 @@
+POST {{host}}/register
+Content-Type: application/json
+
+{
+    "nickname": "IRus",
+    "email": "ruslan@heapy.io",
+    "password": [
+        "w",
+        "o",
+        "r",
+        "l",
+        "d"
+    ]
+}
+
+###
+
+POST {{host}}/login
+Content-Type: application/json
+
+{
+    "email": "ruslan@heapy.io",
+    "password": [
+        "w",
+        "o",
+        "r",
+        "l",
+        "d"
+    ]
+}
+
+###
+
+GET {{host}}/
+
+###
+
+GET {{host}}/ping/test
+
+###
+
+GET {{host}}/kugs
+
+###
+
+POST {{host}}/kugs
+
+###
+
+GET {{host}}/metrics-micrometer
+
+###
+
+GET {{host}}/test

@@ -1,16 +1,14 @@
-node_modules
-npm-debug.log
-dist
-app/LinksWithStars.json
-/project.env
-/versions.json
+# Generated
+/readme/README.md
 
-# Kotlin/Gradle/Idea
+# Local Configuration
+.env
+
+# Intellij Idea
 .idea
-.gradle
-build
 out
 *.iml
 
-# Local folders
-/talking_kotlin
+# Gradle
+.gradle
+build

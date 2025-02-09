@@ -7,20 +7,20 @@ import com.rometools.rome.feed.synd.SyndEntryImpl
 import com.rometools.rome.feed.synd.SyndFeedImpl
 import com.rometools.rome.feed.synd.SyndImageImpl
 import com.rometools.rome.io.SyndFeedOutput
+import link.kotlin.scripts.dsl.Article
 import java.io.StringWriter
 import java.time.Instant
+import java.time.ZoneOffset
 import java.util.Date
 
-
-
 interface RssGenerator {
-    fun generate(name: String, limit: Int): String
+    fun generate(articles: List<Article>, name: String): String
+
+    companion object
 }
 
-class DefaultRssGenerator(
-    private val articles: List<Article>
-) : RssGenerator {
-    override fun generate(name: String, limit: Int): String {
+private class DefaultRssGenerator : RssGenerator {
+    override fun generate(articles: List<Article>, name: String): String {
         val feed = SyndFeedImpl().apply {
             title = "Kotlin Programming Language"
             link = "https://kotlin.link/"
@@ -41,9 +41,9 @@ class DefaultRssGenerator(
                 SyndCategoryImpl().apply { this.name = "Programming" },
                 SyndCategoryImpl().apply { this.name = "Android" }
             )
-            generator = "Kotlin 1.1.1"
+            generator = "Kotlin 1.4.10"
             publishedDate = Date.from(Instant.now())
-            entries = articles.take(limit).map(::toSyndEntry)
+            entries = articles.map(::toSyndEntry)
         }
 
         val writer = StringWriter()
@@ -59,8 +59,14 @@ private fun toSyndEntry(article: Article): SyndEntry {
         link = "https://kotlin.link/articles/${article.filename}"
         title = article.title
         author = article.author
+        updatedDate = Date.from(article.date.atStartOfDay().toInstant(ZoneOffset.UTC))
         description = SyndContentImpl().also { content ->
             content.value = article.description
         }
     }
 }
+
+fun RssGenerator.Companion.default(): RssGenerator {
+    return DefaultRssGenerator()
+}
+
