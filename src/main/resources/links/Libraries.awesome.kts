@@ -451,6 +451,13 @@ category("Libraries/Frameworks") {
       desc = "Snapshot testing (inline, on disk, and memoization)"
       setTags("test", "snapshot", "multiplatform")
     }
+    link {
+      github = "clovis-ai/prepared"
+      href = "https://opensavvy.gitlab.io/groundwork/prepared/docs/index.html"
+      desc = "Magicless testing framework for Kotlin Multiplatform, featuring time management, parameterization and isolated features."
+      setTags("test", "testing", "multiplatform")
+      setPlatforms(COMMON, JVM, JS, NATIVE)
+    }
   }
   subcategory("Mocks and Fakes") {
     link {
@@ -936,6 +943,13 @@ category("Libraries/Frameworks") {
       setTags("Exposed", "Vert.x", "vertx", "database", "query", "SQL", "postgres", "postgresql", "async", "async-io", "non-blocking")
       setPlatforms(JVM)
     }
+    link {
+      github = "clovis-ai/ktmongo"
+      href = "https://opensavvy.gitlab.io/ktmongo/docs"
+      desc = "Modern typesafe MongoDB DSL for Kotlin."
+      setTags("database", "NoSQL", "driver", "query", "mongodb", "bson", "async", "async-io", "non-blocking")
+      setPlatforms(JVM)
+    }
   }
   subcategory("Tools") {
     link {
@@ -977,6 +991,12 @@ category("Libraries/Frameworks") {
       desc = "An anti-bikeshedding Kotlin linter with built-in formatter. Get instant formating with Ktlint in your IDEA."
       setTags("style", "linter","Intellij IDEA, Android Studio")
       awesome()
+    }
+    link {
+      github = "sapotero/DocGenPlugin"
+      href = "https://plugins.jetbrains.com/plugin/26488-kdocgen"
+      desc = "KDocGen – an IntelliJ IDEA plugin that automatically generates KDoc, completes missing code, creates Kotest tests, and adds meaningful comments with a single shortcut!"
+      setTags("artificial-intelligence", "code-generation", "documentation", "Intellij IDEA, Android Studio")
     }
     link {
       name = "Kotlin Notebook"
@@ -1051,6 +1071,18 @@ category("Libraries/Frameworks") {
       setTags("template", "template-engine")
       setPlatforms(JVM)
     }
+    link {
+      github = "clovis-ai/Dokka-MkDocs"
+      href = "https://opensavvy.gitlab.io/automation/dokka-material-mkdocs/docs"
+      desc = "Embed your kdoc comments into an MkDocs website."
+      setTags("documentation")
+    }
+    link {
+      github = "CLOVIS-AI/Kotlin-Transitive-Resources"
+      desc = "Include resource files into a KotlinJS library"
+      setTags("build", "resource", "gradle")
+      setPlatforms(JS)
+    }
   }
   subcategory("Compiler Plugins") {
     link {
@@ -1082,6 +1114,12 @@ category("Libraries/Frameworks") {
       github = "danger/kotlin"
       desc = "Stop saying \"you forgot to …\" in code review in Kotlin"
       setTags("danger", "ci", "continuous", "integration", "code", "review")
+    }
+    link {
+      github = "CLOVIS-AI/gitlab.main.kts"
+      href = "https://opensavvy.gitlab.io/automation/gitlab-ci.kt/docs/"
+      desc = "Replace your GitLab CI YAML files by Kotlin scripts"
+      setTags("ci", "continuous", "integration", "gitlab")
     }
   }
   subcategory("Code Generators") {
@@ -1713,6 +1751,18 @@ category("Libraries/Frameworks") {
       desc = "In memory search engine for simple in app search. Implements tf/idf and a some basic queries, tokenizers and analyzers."
       setTags("search","tf/idf")
       setPlatforms(COMMON, JVM, JS)
+    }
+    link {
+      github = "clovis-ai/pedestal"
+      desc = "Caching, error tracking, progress tracking, weak references, and more…"
+      setTags("cache", "error", "progress", "weak")
+      setPlatforms(COMMON, JVM, JS, NATIVE)
+    }
+    link {
+      github = "daniel-rusu/pods4k"
+      desc = "Performance-oriented data structures for Kotlin, including Immutable Arrays"
+      setTags("kotlin", "data-structure", "performance", "efficient")
+      setPlatforms(JVM, ANDROID)
     }
   }
   subcategory("Parsers") {
@@ -2367,6 +2417,15 @@ category("Libraries/Frameworks") {
       desc = "A simple, modern and coroutine based Kotlin Email API, supporting both clientside and serverside projects."
       setTags("mail", "smtp", "email", "mailserver")
       setPlatforms(JVM)
+    }
+  }
+  subcategory("Blockchain") {
+    link {
+      github = "sol4k/sol4k"
+      desc = "A Kotlin client for Solana that allows building and sending transactions, reading data from the blockchain, performing operations with public and private keys, and more."
+      href = "https://sol4k.org"
+      setPlatforms(JVM, ANDROID, COMMON)
+      setTags("blockchain", "solana", "web3", "rpc-client")
     }
   }
   subcategory("Jetpack-Compose"){
